@@ -3,7 +3,7 @@
 
 # Build Requirements
 -  **Unity Hub** - The project manager for Unity projects.
--  **Unity Editor 2020.3.48f1** - The Editor for Unity projects.
+-  **Unity Editor 2020.3.12f1** - The Editor for Unity projects.
 -  **Build Modules** - Any modules you plan to build with (Ex: Windows, MacOS, Linux, WebGL, etc.). See, [Add modules to the Unity Editor](https://docs.unity3d.com/hub/manual/AddModules.html), for instructions.
 
 # How to Build
@@ -11,8 +11,8 @@
 -  CD to the directory of your choice. ```cd path/to/project```
 -  Clone to your current directory. ```git clone https://github.com/LoganTCP/nothing..git``` (Note: you may have to rename the cloned folder to remove the ```.``` otherwise, the project will not open).
 
- #### 2. Open in Unity 2020.3.48f1
--  Open Unity Hub and make sure you have ```Unity 2020.3.48f1``` installed.
+ #### 2. Open in Unity 2020.3.12f1
+-  Open Unity Hub and make sure you have ```Unity 2020.3.12f1``` installed.
 -  Click ```Add``` in the top-right corner of the window.
 -  Navigate to the cloned repo and open it.
 

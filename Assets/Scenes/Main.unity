@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 230067643}
   - component: {fileID: 230067642}
   - component: {fileID: 230067641}
+  - component: {fileID: 230067644}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -242,6 +243,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 230067644}
+        m_TargetAssemblyTypeName: QuitGame, Assembly-CSharp
+        m_MethodName: lockMouse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &230067642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,6 +293,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 230067639}
   m_CullTransparentMesh: 1
+--- !u!114 &230067644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230067639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 242e77a470fb34aaf89d2d712e7e0043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &246291356
 GameObject:
   m_ObjectHideFlags: 0

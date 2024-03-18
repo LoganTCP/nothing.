@@ -12,9 +12,16 @@ public class GetEscKey : MonoBehaviour
     {
         if (Input.GetKeyDown("escape"))
         {
+            //Set PauseMenu active
             PauseMenu.SetActive(true);
+            //Set MainCamera active
             MainCamera.SetActive(true);
+            //Set FPSController deactivated
             FPSController.SetActive(false);
+            // Set cursor lock mode to None
+            Cursor.lockState = CursorLockMode.None;
+            // Make the cursor visible
+            Cursor.visible = true;
         }
     }
 }

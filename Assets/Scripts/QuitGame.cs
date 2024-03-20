@@ -8,7 +8,7 @@ public class QuitGame : MonoBehaviour
         Debug.Log("Quitting game...");
         Application.Quit();
     }
-    
+
     // Method to lock the mouse
     public void lockMouse()
     {

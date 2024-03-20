@@ -11,13 +11,13 @@ namespace UnityStandardAssets.Vehicles.Car
 
         private IEnumerator Start()
         {
-			while (true)
+            while (true)
             {
                 yield return null;
 
                 if (transform.parent.parent == null)
                 {
-					Destroy(gameObject, m_PersistTime);
+                    Destroy(gameObject, m_PersistTime);
                 }
             }
         }

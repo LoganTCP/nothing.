@@ -35,7 +35,7 @@ namespace UnityStandardAssets.Cameras
         {
             // calculate the correct field of view to fit the bounds size at the current distance
             float dist = (m_Target.position - transform.position).magnitude;
-            float requiredFOV = Mathf.Atan2(m_BoundSize, dist)*Mathf.Rad2Deg*m_ZoomAmountMultiplier;
+            float requiredFOV = Mathf.Atan2(m_BoundSize, dist) * Mathf.Rad2Deg * m_ZoomAmountMultiplier;
 
             m_Cam.fieldOfView = Mathf.SmoothDamp(m_Cam.fieldOfView, requiredFOV, ref m_FovAdjustVelocity, m_FovAdjustTime);
         }

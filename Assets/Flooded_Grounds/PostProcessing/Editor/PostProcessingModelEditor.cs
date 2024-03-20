@@ -26,10 +26,10 @@ namespace UnityEditor.PostProcessing
         }
 
         public virtual void OnEnable()
-        {}
+        { }
 
         public virtual void OnDisable()
-        {}
+        { }
 
         internal void OnGUI()
         {
@@ -59,7 +59,7 @@ namespace UnityEditor.PostProcessing
         }
 
         public virtual void OnInspectorGUI()
-        {}
+        { }
 
         public void Repaint()
         {

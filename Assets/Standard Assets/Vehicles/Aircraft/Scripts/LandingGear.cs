@@ -49,7 +49,7 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
             }
 
             // set the parameter on the animator controller to trigger the appropriate animation
-            m_Animator.SetInteger("GearState", (int) m_State);
+            m_Animator.SetInteger("GearState", (int)m_State);
         }
     }
 }

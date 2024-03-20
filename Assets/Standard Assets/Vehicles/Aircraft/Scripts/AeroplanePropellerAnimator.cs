@@ -8,8 +8,8 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
         [SerializeField] private Transform m_PropellorModel;                          // The model of the the aeroplane's propellor.
         [SerializeField] private Transform m_PropellorBlur;                           // The plane used for the blurred propellor textures.
         [SerializeField] private Texture2D[] m_PropellorBlurTextures;                 // An array of increasingly blurred propellor textures.
-        [SerializeField] [Range(0f, 1f)] private float m_ThrottleBlurStart = 0.25f;   // The point at which the blurred textures start.
-        [SerializeField] [Range(0f, 1f)] private float m_ThrottleBlurEnd = 0.5f;      // The point at which the blurred textures stop changing.
+        [SerializeField][Range(0f, 1f)] private float m_ThrottleBlurStart = 0.25f;   // The point at which the blurred textures start.
+        [SerializeField][Range(0f, 1f)] private float m_ThrottleBlurEnd = 0.5f;      // The point at which the blurred textures stop changing.
         [SerializeField] private float m_MaxRpm = 2000;                               // The maximum speed the propellor can turn at.
 
         private AeroplaneController m_Plane;      // Reference to the aeroplane controller.
@@ -35,7 +35,7 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
         private void Update()
         {
             // Rotate the propellor model at a rate proportional to the throttle.
-            m_PropellorModel.Rotate(0, m_MaxRpm*m_Plane.Throttle*Time.deltaTime*k_RpmToDps, 0);
+            m_PropellorModel.Rotate(0, m_MaxRpm * m_Plane.Throttle * Time.deltaTime * k_RpmToDps, 0);
 
             // Create an integer for the new state of the blur textures.
             var newBlurState = 0;
@@ -44,7 +44,7 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
             if (m_Plane.Throttle > m_ThrottleBlurStart)
             {
                 var throttleBlurProportion = Mathf.InverseLerp(m_ThrottleBlurStart, m_ThrottleBlurEnd, m_Plane.Throttle);
-                newBlurState = Mathf.FloorToInt(throttleBlurProportion*(m_PropellorBlurTextures.Length - 1));
+                newBlurState = Mathf.FloorToInt(throttleBlurProportion * (m_PropellorBlurTextures.Length - 1));
             }
 
             // If the blur state has changed

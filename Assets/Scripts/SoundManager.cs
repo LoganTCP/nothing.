@@ -1,16 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
-    [SerializeField] Slider volumeSlider;
+    [SerializeField] private Slider volumeSlider;
 
-    // Start is called before the first frame update
     void Start()
     {
-        if(!PlayerPrefs.HasKey("mainVolume"))
+        if (!PlayerPrefs.HasKey("mainVolume"))
         {
             PlayerPrefs.SetFloat("mainVolume", 1);
             Load();
@@ -19,8 +16,12 @@ public class SoundManager : MonoBehaviour
         {
             Load();
         }
+
+        // Add listener to the volume slider's On Value Changed event
+        volumeSlider.onValueChanged.AddListener(delegate { ChangeVolume(); });
     }
 
+    // Called when the volume slider changes
     public void ChangeVolume()
     {
         AudioListener.volume = volumeSlider.value;
@@ -30,6 +31,8 @@ public class SoundManager : MonoBehaviour
     private void Load()
     {
         volumeSlider.value = PlayerPrefs.GetFloat("mainVolume");
+        // Apply the volume immediately when loading
+        AudioListener.volume = volumeSlider.value;
     }
 
     private void Save()

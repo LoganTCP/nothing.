@@ -219,8 +219,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1912686517}
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
+        m_MethodName: TriggerOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 966661135}
-        m_TargetAssemblyTypeName: SettingsTrigger, Assembly-CSharp
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
         m_MethodName: TriggerIn
         m_Mode: 1
         m_Arguments:
@@ -232,20 +244,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1867567737}
-        m_TargetAssemblyTypeName: SettingsTrigger, Assembly-CSharp
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
         m_MethodName: TriggerIn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1912686517}
-        m_TargetAssemblyTypeName: MainMenuPlay, Assembly-CSharp
-        m_MethodName: TriggerOut
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -389,9 +389,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 966661135}
-        m_TargetAssemblyTypeName: SettingsTrigger, Assembly-CSharp
-        m_MethodName: TriggerIn
+      - m_Target: {fileID: 1181911534}
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
+        m_MethodName: TriggerOut
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -401,9 +401,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1181911534}
-        m_TargetAssemblyTypeName: AudioSettingTrigger, Assembly-CSharp
-        m_MethodName: TriggerOut
+      - m_Target: {fileID: 966661135}
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
+        m_MethodName: TriggerIn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -634,8 +634,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 230067644}
-        m_TargetAssemblyTypeName: QuitGame, Assembly-CSharp
+      - m_Target: {fileID: 758885864}
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
         m_MethodName: lockMouse
         m_Mode: 1
         m_Arguments:
@@ -647,7 +647,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 758885864}
-        m_TargetAssemblyTypeName: PauseMenuIn, Assembly-CSharp
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
         m_MethodName: TriggerFadeOutAnimation
         m_Mode: 1
         m_Arguments:
@@ -1310,7 +1310,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 758885864}
-        m_TargetAssemblyTypeName: PauseMenuAnim, Assembly-CSharp
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
         m_MethodName: TriggerOut
         m_Mode: 1
         m_Arguments:
@@ -1321,8 +1321,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1322754463}
-        m_TargetAssemblyTypeName: SettingsTrigger, Assembly-CSharp
+      - m_Target: {fileID: 966661135}
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
         m_MethodName: TriggerIn
         m_Mode: 1
         m_Arguments:
@@ -1333,8 +1333,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 966661135}
-        m_TargetAssemblyTypeName: SettingsTrigger, Assembly-CSharp
+      - m_Target: {fileID: 1322754463}
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
         m_MethodName: TriggerIn
         m_Mode: 1
         m_Arguments:
@@ -1748,11 +1748,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 758885859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b90d83fba17fae49991d0487f93dc9d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b3b67466fe24ca41b3b9e3e5772a8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuAnimator: {fileID: 758885865}
-  pauseMenuCanvasGroup: {fileID: 758885866}
+  animator: {fileID: 758885865}
+  canvasGroup: {fileID: 758885866}
 --- !u!95 &758885865
 Animator:
   serializedVersion: 3
@@ -2057,10 +2057,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 966661130}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78bdaa5c80412b745aff1cebe19b576b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b3b67466fe24ca41b3b9e3e5772a8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settingsCanvasGroup: {fileID: 966661136}
+  animator: {fileID: 0}
+  canvasGroup: {fileID: 966661136}
 --- !u!225 &966661136
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2424,10 +2425,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1181911529}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2006992ac7ec6704eb68c2e7047eb08b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b3b67466fe24ca41b3b9e3e5772a8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioCanvasGroup: {fileID: 1181911535}
+  animator: {fileID: 0}
+  canvasGroup: {fileID: 1181911535}
 --- !u!225 &1181911535
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2867,8 +2869,8 @@ GameObject:
   - component: {fileID: 1322754460}
   - component: {fileID: 1322754459}
   - component: {fileID: 1322754458}
-  - component: {fileID: 1322754463}
   - component: {fileID: 1322754462}
+  - component: {fileID: 1322754463}
   m_Layer: 5
   m_Name: BackButtonPaused
   m_TagString: Untagged
@@ -2952,20 +2954,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 758885864}
-        m_TargetAssemblyTypeName: PauseMenuAnim, Assembly-CSharp
-        m_MethodName: TriggerIn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1322754463}
-        m_TargetAssemblyTypeName: SettingsTrigger, Assembly-CSharp
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
         m_MethodName: TriggerOut
         m_Mode: 1
         m_Arguments:
@@ -2977,8 +2967,20 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 966661135}
-        m_TargetAssemblyTypeName: SettingsTrigger, Assembly-CSharp
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
         m_MethodName: TriggerOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 758885864}
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
+        m_MethodName: TriggerIn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3047,10 +3049,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1322754456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78bdaa5c80412b745aff1cebe19b576b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b3b67466fe24ca41b3b9e3e5772a8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settingsCanvasGroup: {fileID: 1322754462}
+  animator: {fileID: 0}
+  canvasGroup: {fileID: 1322754462}
 --- !u!1 &1336616183
 GameObject:
   m_ObjectHideFlags: 0
@@ -3148,7 +3151,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 966661135}
-        m_TargetAssemblyTypeName: SettingsTrigger, Assembly-CSharp
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
         m_MethodName: TriggerOut
         m_Mode: 1
         m_Arguments:
@@ -3160,7 +3163,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1181911534}
-        m_TargetAssemblyTypeName: AudioSettingTrigger, Assembly-CSharp
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
         m_MethodName: TriggerIn
         m_Mode: 1
         m_Arguments:
@@ -4136,7 +4139,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1912686517}
-        m_TargetAssemblyTypeName: MainMenuPlayAnimator, Assembly-CSharp
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
         m_MethodName: TriggerFadeOutAnimation
         m_Mode: 1
         m_Arguments:
@@ -4198,8 +4201,8 @@ GameObject:
   - component: {fileID: 1867567740}
   - component: {fileID: 1867567739}
   - component: {fileID: 1867567738}
-  - component: {fileID: 1867567737}
   - component: {fileID: 1867567736}
+  - component: {fileID: 1867567737}
   m_Layer: 5
   m_Name: BackButtonMain
   m_TagString: Untagged
@@ -4248,10 +4251,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1867567734}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78bdaa5c80412b745aff1cebe19b576b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b3b67466fe24ca41b3b9e3e5772a8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settingsCanvasGroup: {fileID: 1867567736}
+  animator: {fileID: 0}
+  canvasGroup: {fileID: 1867567736}
 --- !u!114 &1867567738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4308,20 +4312,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1912686517}
-        m_TargetAssemblyTypeName: MainMenuPlay, Assembly-CSharp
-        m_MethodName: TriggerIn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1867567737}
-        m_TargetAssemblyTypeName: SettingsTrigger, Assembly-CSharp
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
         m_MethodName: TriggerOut
         m_Mode: 1
         m_Arguments:
@@ -4333,8 +4325,20 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 966661135}
-        m_TargetAssemblyTypeName: SettingsTrigger, Assembly-CSharp
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
         m_MethodName: TriggerOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1912686517}
+        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
+        m_MethodName: TriggerIn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4577,11 +4581,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1912686512}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 976685f8a0b7c864a9b361d9d5b7e735, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b3b67466fe24ca41b3b9e3e5772a8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasAnimator: {fileID: 1912686518}
-  mainCanvasGroup: {fileID: 1912686519}
+  animator: {fileID: 1912686518}
+  canvasGroup: {fileID: 1912686519}
 --- !u!95 &1912686518
 Animator:
   serializedVersion: 3

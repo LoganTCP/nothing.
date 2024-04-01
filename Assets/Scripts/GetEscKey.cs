@@ -8,26 +8,22 @@ public class GetEscKey : MonoBehaviour
     public GameObject FPSController;
     public GameObject MainCamera;
 
-    private PauseMenuAnim pauseMenuAnim;
+    private AnimationController AnimationController;
 
     void Start()
     {
-        pauseMenuAnim = PauseMenu.GetComponent<PauseMenuAnim>();
+        AnimationController = PauseMenu.GetComponent<AnimationController>();
     }
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown("escape"))
         {
-            //Set PauseMenu active
-            //PauseMenu.SetActive(true);
-
             // Call TriggerFadeIn animation for pause menu
-            pauseMenuAnim.TriggerFadeInAnimation();
-
-            //Set MainCamera active
+            AnimationController.TriggerFadeInAnimation();
+            // Set MainCamera active
             MainCamera.SetActive(true);
-            //Set FPSController deactivated
+            // Set FPSController deactivated
             FPSController.SetActive(false);
             // Set cursor lock mode to None
             Cursor.lockState = CursorLockMode.None;

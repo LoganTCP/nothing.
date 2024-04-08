@@ -1,15 +1,16 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SoundManager : MonoBehaviour
+public class AmbientSoundManager : MonoBehaviour
 {
+    [SerializeField] private AudioSource ambientAudioSource;
     [SerializeField] private Slider volumeSlider;
 
     void Start()
     {
-        if (!PlayerPrefs.HasKey("mainVolume"))
+        if (!PlayerPrefs.HasKey("ambVolume"))
         {
-            PlayerPrefs.SetFloat("mainVolume", 1);
+            PlayerPrefs.SetFloat("ambVolume", 1);
             Load();
         }
         else
@@ -25,18 +26,20 @@ public class SoundManager : MonoBehaviour
     public void ChangeVolume()
     {
         AudioListener.volume = volumeSlider.value;
+        ambientAudioSource.volume = volumeSlider.value;
         Save();
     }
 
     private void Load()
     {
-        volumeSlider.value = PlayerPrefs.GetFloat("mainVolume");
+        volumeSlider.value = PlayerPrefs.GetFloat("ambVolume");
         // Apply the volume immediately when loading
         AudioListener.volume = volumeSlider.value;
+        ambientAudioSource.volume = volumeSlider.value;
     }
 
     private void Save()
     {
-        PlayerPrefs.SetFloat("mainVolume", volumeSlider.value);
+        PlayerPrefs.SetFloat("ambVolume", volumeSlider.value);
     }
 }

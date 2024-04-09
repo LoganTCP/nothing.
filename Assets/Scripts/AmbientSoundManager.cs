@@ -6,6 +6,8 @@ public class AmbientSoundManager : MonoBehaviour
     [SerializeField] private AudioSource ambientAudioSource;
     [SerializeField] private Slider volumeSlider;
 
+    private float mainVolume = 1.0f; // Store main volume separately
+
     void Start()
     {
         if (!PlayerPrefs.HasKey("ambVolume"))
@@ -25,7 +27,11 @@ public class AmbientSoundManager : MonoBehaviour
     // Called when the volume slider changes
     public void ChangeVolume()
     {
-        AudioListener.volume = volumeSlider.value;
+        mainVolume = AudioListener.volume;
+        AudioListener.volume = mainVolume;
+
+        // Calculate the ambient volume relative to main volume
+        float ambientVolume = volumeSlider.value * mainVolume;
         ambientAudioSource.volume = volumeSlider.value;
         Save();
     }
@@ -34,8 +40,9 @@ public class AmbientSoundManager : MonoBehaviour
     {
         volumeSlider.value = PlayerPrefs.GetFloat("ambVolume");
         // Apply the volume immediately when loading
-        AudioListener.volume = volumeSlider.value;
-        ambientAudioSource.volume = volumeSlider.value;
+        mainVolume = AudioListener.volume;
+        AudioListener.volume = mainVolume;
+        ambientAudioSource.volume = volumeSlider.value * mainVolume;
     }
 
     private void Save()

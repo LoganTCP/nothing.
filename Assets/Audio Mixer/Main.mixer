@@ -74,7 +74,9 @@ AudioMixerSnapshotController:
   m_Name: Snapshot
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 3d936ae41434e4f7588b4013e748fdfa
-  m_FloatValues: {}
+  m_FloatValues:
+    3b2cf2aed95f94154aab089ff5b5fe16: -12
+    c13a7c4f70fc7403d83bd7a32c5eedab: -6
   m_TransitionOverrides: {}
 --- !u!244 &525794897716591920
 AudioMixerEffectController:
@@ -87,6 +89,48 @@ AudioMixerEffectController:
   m_EffectName: Attenuation
   m_MixLevel: a3476b2c04fd64699836e43294f7b1bc
   m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &2369861490837967359
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 0f273718e3a854241950c4b3cd0d8c1f
+  m_EffectName: SFX Reverb
+  m_MixLevel: c74f484af5b6145409a9c2514dc697cf
+  m_Parameters:
+  - m_ParameterName: Dry Level
+    m_GUID: 37195be817bf54aaaacebc28ede66211
+  - m_ParameterName: Room
+    m_GUID: 5bda8ec32012144c89db63d6c17f0503
+  - m_ParameterName: Room HF
+    m_GUID: b20112d084e254dc9b77dbd52d71461a
+  - m_ParameterName: Decay Time
+    m_GUID: 7a5f9af78f3a54577bb1ea6972e6dcf0
+  - m_ParameterName: Decay HF Ratio
+    m_GUID: f6be11f36b276442f81ba5d102720842
+  - m_ParameterName: Reflections
+    m_GUID: 306c176fb60a44f4c94a5750ba502e48
+  - m_ParameterName: Reflect Delay
+    m_GUID: 53eb8c4fa681b4dc7874f3f56d7e7085
+  - m_ParameterName: Reverb
+    m_GUID: 73e1c6b7e856740159b42261980fffd2
+  - m_ParameterName: Reverb Delay
+    m_GUID: dd2dfd13a07f9468c918fd44c8bbe177
+  - m_ParameterName: Diffusion
+    m_GUID: c21241314b3ab43889c6086cceddcc6d
+  - m_ParameterName: Density
+    m_GUID: f17c66f7079ba49319f6ff9610e88796
+  - m_ParameterName: HF Reference
+    m_GUID: 72ac061aca2dd48d1bb7bb1427fd5ad5
+  - m_ParameterName: Room LF
+    m_GUID: 599c93cd480fc457c886cf16c4edae74
+  - m_ParameterName: LF Reference
+    m_GUID: cdd5bf8a30843480e9c16adb7aa10ec0
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
